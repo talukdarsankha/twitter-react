@@ -2,7 +2,7 @@ import axios from "axios"
 
 
 // export const API_BASE_URL = "http://localhost:8080"
-export const API_BASE_URL = "https://twitter-backend-production-5da2.up.railway.app"
+export const API_BASE_URL = "https://twitter-backend-production-5da2.up.railway.app/"
 
 
 // let jwt = localStorage.getItem("jwt");
