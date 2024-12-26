@@ -12,6 +12,8 @@ import { createTweet, getAllTweet } from '../../Redux/Tweet/Action';
 import { UploadToCloudinary } from '../../Config/UploadCloudinary';
 import EmojiPicker from 'emoji-picker-react';
 
+import { useNavigate } from "react-router-dom";
+
 const validationSchema = Yup.object().shape({
   content:Yup.string().required("Tweet text is required")
 })
@@ -126,7 +128,7 @@ function HomeSection() {
 
 
      
-
+  const navigate = useNavigate();
 
   return (
 
@@ -138,6 +140,7 @@ function HomeSection() {
        <section className='pb-10 border-2 rounded-md p-3'>
            <div className='flex space-x-3'>
              <Avatar
+               onClick={() => navigate(`/profile/${auth.user?.id}`)}
               alt='username'
               src={auth.user?.image}
              />
